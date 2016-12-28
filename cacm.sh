@@ -156,6 +156,10 @@ copy_and_convert() {
 }
 
 main() {
+
+    command -v opusenc >/dev/null 2>&1 || { printf "This script requires opusenc (opus-tools). Aborting.\n" >&2; exit 255; }
+    command -v ffprobe >/dev/null 2>&1 || { printf "This script requires ffprobe (ffmpeg). Aborting.\n" >&2; exit 255; }
+
     while getopts d:f:hv opt; do
         case $opt in
             d)  dest=$OPTARG
