@@ -6,7 +6,7 @@ This script copies and converts music.
 It does a few things
 
 1. Scans for music in the directories provided in the input file
-2. Determines what's newer on the source (or doesn't exist on the destination
+2. Determines what's newer on the source (or doesn't exist on the destination)
 3. Converts lossless and copies lossy files from the source to the destination
 
 Best of all, it does this in a multithreaded way!
@@ -42,12 +42,15 @@ Troubleshooting
 ---------------
 
 It turns out bash arrays aren't super performant, and the concurrency library
-I'm using hangs when you're using more than >1000 files.  Just be patient when
+I'm using hangs when you're using more than 1000 files.  Just be patient when
 it says "Determining what should be processed"
 
 Also MTP is a disgusting protocol.  If you have a lot of cores, even over USB
 3, you're going to see issues.  Increase your usb timeout if you can figure
 out how.  Otherwise you might lose connection.
+
+Currently it doesn't like converting files with double quotation marks in the
+name
 
 Contributing
 ------------
