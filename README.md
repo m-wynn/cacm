@@ -1,6 +1,8 @@
 CACM -- Copy And Convert Music
 ==============================
 
+**This was a fun project, but I'm replacing it with https://github.com/m-wynn/casm in Rust!**
+
 This script copies and converts music.
 
 It does a few things
